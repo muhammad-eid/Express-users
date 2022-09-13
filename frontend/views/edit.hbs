@@ -1,0 +1,22 @@
+{{>header}}
+{{>nav}}
+
+<form action="/EditPost/{{user.id}}" method="post" class="mx-5">
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input name="name" type="text" class="form-control" id="name" value="{{user.name}}"/>
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input name="age" type="number" class="form-control" id="age" value="{{user.age}}"/>
+  </div>
+  {{!-- <div class="mb-3 form-check">
+    <input name="status" type="checkbox" class="form-check-input" id="status" checked="{{user.status}}">
+    <label class="form-check-label" for="status">Active</label>
+  </div> --}}
+
+  <button type="submit" class="btn btn-primary">Edit User</button>
+</form>
+
+{{>footer}}
